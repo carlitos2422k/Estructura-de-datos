@@ -1,3 +1,9 @@
+/*******************************************************
+ * Universidad de las Fuerzas Armadas ESPE             *
+ * Departamento de Ciencias de la Computación          *
+ * Autor: Carlos Pérez                                 *
+ * Fecha: Miercoles 30 de octubre del 2024             *
+ *******************************************************/
 #include <iostream>
 #include "../model/Fraccion.h"
 #include "../controller/OperacionesFraccion.h"
@@ -7,7 +13,7 @@ int main() {
     int numerador2, denominador2;
 
    
-    std::cout << "Ingrese el numerador de la primera fracción: ";
+    std:: cout << "Ingrese el numerador de la primera fracción: ";
     std::cin >> numerador1;
     std::cout << "Ingrese el denominador de la primera fracción: ";
     std::cin >> denominador1;
