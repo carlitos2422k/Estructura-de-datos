@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1731627323 source:c:\users\carlos\desktop\main.cpp
+	<iostream>
+	"Matriz.h"
+	"Operaciones.h"
+
+1731626890 c:\users\carlos\desktop\matriz.h
+	<iostream>
+
+1731551857 c:\users\carlos\desktop\matriz.cpp
+	<iostream>
+	"Matriz.h"
+
+1731551815 c:\users\carlos\desktop\operaciones.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<stdio.h>
+	<conio.h>
+	"Operaciones.h"
+
+1731626890 c:\users\carlos\desktop\operaciones.h
+	"Matriz.h"
+
+1731626899 source:c:\users\carlos\desktop\matriz.cpp
+	<iostream>
+	"Matriz.h"
+
+1731626866 source:c:\users\carlos\desktop\operaciones.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<stdio.h>
+	<conio.h>
+	"Operaciones.h"
+
+1731552024 source:c:\users\carlos\desktop\estructura de datos\lol\main.cpp
+
