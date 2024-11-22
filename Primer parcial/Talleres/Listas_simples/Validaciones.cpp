@@ -80,22 +80,56 @@ T Validaciones<T>::ingresar(char *msj, char *tipo)
                 }
             }
         }
-        else if (tipo == "string")
+else if (tipo == "string")
+{
+    bool hasLetter = false; // Indicador para verificar si ya se ingresó una letra.
+    while (true)
+    {
+        c = getch();
+        if (c == 13) // Enter presionado, salir del bucle.
         {
-            if (isalpha(c) || c==32)
+            break;
+        }
+        else if (isalpha(c)) // Si es una letra
+        {
+            printf("%c", c);
+            cad[i++] = c;
+            hasLetter = true; // Ahora se permiten los espacios.
+        }
+        else if (c == 32 && hasLetter) // Permite espacios solo si ya hay una letra.
+        {
+            printf("%c", c);
+            cad[i++] = c;
+        }
+        else if (c == 8) // Manejo de retroceso.
+        {
+            if (i > 0)
             {
-                printf("%c", c);
-                cad[i++] = c;
-            }
-            else if (c == 8)
-            {
-                if (i > 0)
+                if (cad[--i] == ' ') // Si el carácter eliminado es un espacio, no cambia el estado de hasLetter.
                 {
                     printf("\b \b");
-                    i--;
+                }
+                else if (isalpha(cad[i])) // Si se elimina una letra, verifica si aún quedan letras.
+                {
+                    printf("\b \b");
+                    hasLetter = false;
+                    for (int j = 0; j < i; j++)
+                    {
+                        if (isalpha(cad[j]))
+                        {
+                            hasLetter = true;
+                            break;
+                        }
+                    }
                 }
             }
         }
+    }
+    cad[i] = '\0'; // Finaliza la cadena correctamente.
+    valor = cad; // Asigna el resultado a 'valor'.
+}
+
+
         else if (tipo == "char")
         {
             if (isalpha(c))
