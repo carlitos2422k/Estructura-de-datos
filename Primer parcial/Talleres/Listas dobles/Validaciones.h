@@ -7,23 +7,24 @@
  * Materia:                        Estructura de datos                                 *
  * NRC :                           1978                                                *
  **************************************************************************************/
-#pragma once
-//#include "Nodo.cpp"
-#include "Nodo.h"
-using namespace std;
+
+#include <conio.h>
+
+
+#if !defined(__Validaciones_Validaciones_h)
+#define __Validaciones_Validaciones_h
 
 template<typename T>
-class Lista_Simple {
-private:
-    Nodo<T>* cabeza;
-public:
-    Lista_Simple();
-    void Insertar_cabeza(T);
-    //void Insertar_cola(T);
-    void Buscar(T);
-    void Eliminar(T);
-    void EliminarDato(T);
-    void Mostrar();
-    bool contains(T _dato);
+class Validaciones
+{
+   public:
+      Validaciones();
+      T ingresar(char *msj, char *tipo);
+   protected:
+   private:
+      T numero;
+
+
 };
 
+#endif

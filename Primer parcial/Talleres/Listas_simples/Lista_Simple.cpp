@@ -82,6 +82,41 @@ template<typename T>
     }
     cout << "El dato " << _dato << " no se encuentra en la lista" << endl;
 }
+template<typename T>
+void Lista_Simple<T>::EliminarDato(T _dato) {
+    Nodo<T>* aux = cabeza;
+    Nodo<T>* anterior = NULL;
+    bool eliminado = false;
+
+    while (aux != NULL) {
+        if (aux->getDato() == _dato) { // Si el dato coincide
+            if (anterior == NULL) {
+                // Caso: Nodo a eliminar es la cabeza
+                cabeza = aux->getSiguiente();
+                delete aux;
+                aux = cabeza; // Actualiza la cabeza
+            } else {
+                // Caso: Nodo a eliminar no es la cabeza
+                anterior->setSiguiente(aux->getSiguiente());
+                delete aux;
+                aux = anterior->getSiguiente(); // Avanza al siguiente nodo
+            }
+            eliminado = true; // Marcamos que al menos un nodo fue eliminado
+        } else {
+            anterior = aux;
+            aux = aux->getSiguiente(); // Avanza al siguiente nodo
+        }
+    }
+
+    // Mensaje de confirmación
+    if (eliminado) {
+        cout << "Todas las ocurrencias del dato '" << _dato << "' fueron eliminadas." << endl;
+    } else {
+        cout << "El dato '" << _dato << "' no se encontró en la lista." << endl;
+    }
+}
+
+
 
 template<typename T> 
  void Lista_Simple<T>::Mostrar() {
