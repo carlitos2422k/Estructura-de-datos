@@ -1,9 +1,9 @@
 /***************************************************************************************
  *            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE                                  *
- * Proposito:                      Programa sobre lista simple                         *
- * Autor:                          Josue Chango, Adonny Calero, Eduardo altamirano     *
+ * Proposito:                      Lista simple                                        *
+ * Autor:                          Carlos Pérez                                        *
  * Fecha de creacion:              18/11/2024                                          *
- * Fecha de modificacion:          18/11/2024                                          *
+ * Fecha de modificacion:          20/11/2024                                          *
  * Materia:                        Estructura de datos                                 *
  * NRC :                           1978                                                *
  **************************************************************************************/
@@ -32,21 +32,6 @@ void Lista_Simple<T>::Insertar_cabeza(T _dato)
         aux->setSiguiente(nuevo);
     }
 }
-
-/*template<typename T> 
- void Lista_Simple<T>::Insertar_cola(T _dato) {
-    Nodo<T>* nuevo = new Nodo(_dato);
-    if (cabeza == NULL) {
-        cabeza = nuevo;
-    }
-    else {
-        Nodo<T>* aux = cabeza;
-        while (aux->getSiguiente() != NULL) {
-            aux = aux->getSiguiente();
-        }
-        aux->setSiguiente(nuevo);
-    }
-}*/
 
 template<typename T> 
  void Lista_Simple<T>::Buscar(T _dato) {

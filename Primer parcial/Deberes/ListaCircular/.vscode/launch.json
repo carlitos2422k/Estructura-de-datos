@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Carlos/Desktop/Estructura de datos/Primer parcial/Talleres/Listas circulares",
-      "program": "c:/Users/Carlos/Desktop/Estructura de datos/Primer parcial/Talleres/Listas circulares/build/Debug/outDebug",
+      "cwd": "c:/Users/Carlos/Desktop/Estructura de datos/Primer parcial/Deberes/ListaCircular",
+      "program": "c:/Users/Carlos/Desktop/Estructura de datos/Primer parcial/Deberes/ListaCircular/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

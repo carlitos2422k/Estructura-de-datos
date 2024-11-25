@@ -1,13 +1,4 @@
-/***************************************************************************************
- *            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE                                  *
- * Proposito:                      Lista simple                                        *
- * Autor:                          Carlos Pérez                                        *
- * Fecha de creacion:              18/11/2024                                          *
- * Fecha de modificacion:          20/11/2024                                          *
- * Materia:                        Estructura de datos                                 *
- * NRC :                           1978                                                *
- **************************************************************************************/
-#include "Lista_Simple.cpp"
+#include "ListaCircular.cpp"
 #include "Nodo.cpp"
 #include <iostream>
 #include <stdlib.h>
@@ -18,70 +9,16 @@
 #include <cctype>
 #include <string>
 using namespace std;
-bool esPalabraIrrelevante(const string& palabra) {
-    string palabraLower = palabra;
-    transform(palabraLower.begin(), palabraLower.end(), palabraLower.begin(), ::tolower);
-
-    // Comprobamos si la palabra es "de", "del", "la", "los", "las", "el", "al"
-    return (palabraLower == "de" || palabraLower == "del" || palabraLower == "la" || palabraLower == "los" || palabraLower == "las" || palabraLower == "el" || palabraLower == "al");
-}
-
-// Función para obtener la primera palabra relevante
-string obtenerPrimeraPalabraRelevante(const string& texto) {
-    stringstream ss(texto);
-    string palabra;
-
-    while (ss >> palabra) {
-        if (!esPalabraIrrelevante(palabra)) {
-            return palabra; // Retorna la primera palabra relevante
-        }
-    }
-    return ""; // Si no se encuentra ninguna palabra relevante
-}
-// Función para generar el correo
-string generarCorreoUnico(const string& nombre1, const string& nombre2, const string& apellido, Lista_Simple<string>& correosGenerados) {
-    string dominio = "@espe.edu.ec";
-
-    // Obtener la primera letra relevante del primer y segundo nombre
-    string primeraLetraNombre1 = obtenerPrimeraPalabraRelevante(nombre1).substr(0, 1);
-    string primeraLetraNombre2 = obtenerPrimeraPalabraRelevante(nombre2).substr(0, 1);
-
-    // Obtener el apellido relevante completo
-    string apellidoRelevante = obtenerPrimeraPalabraRelevante(apellido);
-
-    // Construir el correo base en minúsculas
-    string correoBase = primeraLetraNombre1 + primeraLetraNombre2 + apellidoRelevante;
-    for (char& c : correoBase) {
-        c = tolower(c);
-    }
-
-    // Empezar con el correo base más el dominio
-    string correo = correoBase + dominio;
-
-    // Verificar si el correo ya existe
-    int contador = 1;
-    while (correosGenerados.contains(correo)) {
-        // Crear una nueva versión con el número antes del dominio
-        correo = correoBase + to_string(contador) + dominio;
-        contador++;
-    }
-
-    // Agregar el correo generado a la lista
-    
-    return correo;
-}
-
-
-
 
 bool esEntero(string);
 
 int main() {
-    Lista_Simple<int>* lista_entero = new Lista_Simple<int>();
-    Lista_Simple<float>* lista_flotante = new Lista_Simple<float>();
-    Lista_Simple<double>* lista_doble = new Lista_Simple<double>();
-    Lista_Simple<std::string>* lista_string1 = new Lista_Simple<std::string>();
-    Lista_Simple<char>* lista_letras = new Lista_Simple<char>();
+    
+    ListaCircular<int>* lista_entero = new ListaCircular<int>();
+    ListaCircular<float>* lista_flotante = new ListaCircular<float>();
+    ListaCircular<double>* lista_doble = new ListaCircular<double>();
+    ListaCircular<std::string>* lista_string1 = new ListaCircular<std::string>();
+    ListaCircular<char>* lista_letras = new ListaCircular<char>();
 
     int opcion, dato_entero;
     float dato_flotante;
@@ -95,6 +32,13 @@ int main() {
     Validaciones<double> ingresar_doble;
     Validaciones<std::string> ingresar_string;
     Validaciones<char> ingresar_letra;
+
+    /*HINSTANCE hDLL = LoadLibrary("ValidDll.dll");
+    if (!hDLL) {
+        std::cerr << "No se pudo cargar la DLL.\n";
+        return 1;
+    }*/
+
 
    do {
         system("cls");
@@ -123,7 +67,7 @@ int main() {
                 case 1:
                     dato_entero = ingresar_entero.ingresar("ingrese el dato a insertar: ", "entero");
                     cout << endl;
-                    lista_entero->Insertar_cabeza(dato_entero);
+                    lista_entero->Insertar(dato_entero);
                     cout << endl << "Dato ingresado correctamente" << endl;
                     system("pause");
                     break;
@@ -168,7 +112,7 @@ int main() {
                 case 1:
                     dato_flotante = ingresar_flotante.ingresar("ingrese el dato a insertar: ", "flotante");
                     cout << endl;
-                    lista_flotante->Insertar_cabeza(dato_flotante);
+                    lista_flotante->Insertar(dato_flotante);
                     cout << endl << "Dato ingresado correctamente" << endl;
                     system("pause");
                     break;
@@ -213,7 +157,7 @@ int main() {
                 case 1:
                     dato_doble = ingresar_doble.ingresar("ingrese el dato a insertar: ", "double");
                     cout << endl;
-                    lista_doble->Insertar_cabeza(dato_doble);
+                    lista_doble->Insertar(dato_doble);
                     cout << endl << "Dato ingresado correctamente" << endl;
                     system("pause");
                     break;
@@ -257,15 +201,8 @@ int main() {
 
                 switch (opcion) {
                 case 1:
-                    /*Nombre1 = ingresar_string.ingresar("ingrese su primer nombre: ", "string");
-                    cout << endl;
-                    Nombre2 = ingresar_string.ingresar("ingrese su segundo nombre: ", "string");
-                    cout << endl;
-                    Apellido = ingresar_string.ingresar("ingrese su Apellido: ", "string");
-                    correo=generarCorreoUnico(Nombre1,Nombre2,Apellido,*lista_string1);
-                    lista_string1->Insertar_cabeza(correo);*/
                     Dato=ingresar_string.ingresar("Ingrese una palabra: ", "string");
-                    lista_string1->Insertar_cabeza(Dato);
+                    lista_string1->Insertar(Dato);
                     cout << endl << "Dato ingresado correctamente" << endl;
                     system("pause");
                     break;
@@ -278,7 +215,7 @@ int main() {
                 case 3:
                     Dato = ingresar_string.ingresar("ingrese el dato a eliminar: ", "string");
                     cout << endl;
-                    lista_string1->EliminarDato(Dato);
+                    lista_string1->Eliminar(Dato);
                     system("pause");
                     break;
                 case 4:
@@ -310,7 +247,7 @@ int main() {
                 case 1:
                     dato_char = ingresar_letra.ingresar("ingrese el dato a insertar: ", "char");
                     cout << endl;
-                    lista_letras->Insertar_cabeza(dato_char);
+                    lista_letras->Insertar(dato_char);
                     cout << endl << "Dato ingresado correctamente" << endl;
                     system("pause");
                     break;
