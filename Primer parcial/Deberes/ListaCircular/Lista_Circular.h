@@ -11,4 +11,7 @@ public:
     void InsertarPorCola(T, T, T, T);
     void Mostrar();
     void BuscarPorCedula(T);
+    void EliminarNodo(T);  // Eliminar nodo por completo
+    void EliminarDatosNodo(T);  // Eliminar datos de un nodo
+    //void EliminarCampoNodo(T);
 };
