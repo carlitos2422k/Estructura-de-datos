@@ -1,5 +1,5 @@
 #include "Lista_Circular.h"
-
+#include "utils.h"
 template<typename T>
 Lista_Circular<T>::Lista_Circular() {
     cabeza = nullptr;
@@ -46,10 +46,11 @@ void Lista_Circular<T>::Mostrar() {
     }
     Nodo<T>* aux = cabeza;
     do {
-        cout << "Nombre: " << aux->getNombre()
-             << ", Apellido: " << aux->getApellido()
-             << ", Cedula: " << aux->getCedula()
-             << ", Correo: " << aux->getCorreo() << endl;
+        
+        cout << "\033[31mNombre: \033[0m" << aux->getNombre()
+             << "\033[31m, Apellido: \033[0m" << aux->getApellido()
+             << "\033[31m, Cedula: \033[0m" << aux->getCedula()
+             << "\033[31m, Correo: \033[0m" << aux->getCorreo() << endl;
         aux = aux->getSiguiente();
     } while (aux != cabeza);
 }
@@ -141,6 +142,26 @@ void Lista_Circular<T>::EliminarDatosNodo(T cedula) {
     
     cout << "Cédula " << cedula << " no encontrada en la lista." << endl;
 }
+template<typename T>
+void Lista_Circular<T>::Cifrar(char a) {
+    if (cabeza == nullptr) {
+        cout << "La lista está vacía." << endl;
+        return;
+    }
+    
+    Nodo<T>* aux = cabeza;
+    do {
+            std :: string NombreC = aux ->getNombre();
+            std :: string ApellidoC = aux ->getApellido();
+
+            Utils::modifyCharInString(NombreC,a,5);
+            Utils::modifyCharInString(ApellidoC,a,5);
+            aux->setNombre(NombreC);
+            aux->setApellido(ApellidoC);
+        aux = aux->getSiguiente();
+    } while (aux != cabeza);
+}
+
 /*
 template<typename T>
 void Lista_Circular<T>::EliminarCampoNodo(T cedula) {

@@ -12,18 +12,19 @@ int main() {
     std::string Nombre, Apellido, Correo, cedulaStr;
     long int Cedula;
     int opcion;
+    char a;
     Validaciones<std::string> ingresar_string;
     Validaciones<long> ingresar_entero;
     Validaciones<int> ingresar_entero1;
 
-    string opciones[] = { "Insertar por cabeza", "Insertar por cola" ,"Buscar por cedula", "Eliminar Nodo", "Eliminar datos Nodo", "Mostrar", "Salir" };
-    const int num_opciones = 7;
+    string opciones[] = { "\033[36mInsertar por cabeza\033[0m", "Insertar por cola" ,"Buscar por cedula", "Eliminar Nodo", "Eliminar datos Nodo", "Cifrar", "Mostrar", "Salir" };
+    const int num_opciones = 8;
     int seleccion = 0;
         while (true) {
         Correo = "";
         cedulaStr = ""; 
         system("cls");
-        cout << "*********** Listas Dobles ***********" << endl;
+        cout << "\033[35m*********** Listas Dobles ***********\033[0m" << endl;
 
         // Mostrar opciones con un indicador para la opción seleccionada
         for (int i = 0; i < num_opciones; ++i) {
@@ -129,12 +130,21 @@ int main() {
                 break;
 
             case 5: // Mostrar
+                cout << "Ingrese el caracter a eliminar: ";
+                cin >> a;
+                lista_string1->Cifrar(a);
+                cout << "Cifrado correctamente";
+                cout << endl;
+                system("pause");
+                break;
+            case 6: // Mostrar
                 lista_string1->Mostrar();
                 cout << endl;
                 system("pause");
                 break;
 
-            case 6: // Salir
+
+            case 7: // Salir
                 cout << "Saliendo del programa..." << endl;
                 delete lista_string1;
                 return 0;

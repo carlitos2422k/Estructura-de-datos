@@ -56,10 +56,3 @@ bool Utils::validateEmail(const std::string& emailInput) {
 
     return std::regex_match(emailInput, pattern);
 }
-void Utils::modifyCharInString(std::string& str, char target, int offset) {
-    for (char& c : str) {
-        if (c == target) {
-            c = static_cast<char>(c + offset); // Incrementa el ASCII solo si coincide
-        }
-    }
-}
