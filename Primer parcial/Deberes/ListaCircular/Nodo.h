@@ -1,3 +1,12 @@
+/***************************************************************************************
+ *            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE                                  *
+ * Proposito:                      Programa sobre lista circular cifrado               *
+ * Autor:                          Carlos Perez                                        *
+ * Fecha de creacion:              04/12/2024                                          *
+ * Fecha de modificacion:          04/12/2024                                          *
+ * Materia:                        Estructura de datos                                 *
+ * NRC :                           1978                                                *
+ **************************************************************************************/
 #pragma once
 #include <iostream>
 #include <string>

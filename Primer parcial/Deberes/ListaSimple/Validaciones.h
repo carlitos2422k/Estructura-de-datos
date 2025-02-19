@@ -1,7 +1,6 @@
 /***************************************************************************************
  *            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE                                  *
- * Proposito:                      Programa sobre lista simple                         *
- * Autor:                          Josue Chango, Adonny Calero, Eduardo altamirano     *
+ * Autor:                          Carlos Perez                                        *
  * Fecha de creacion:              18/11/2024                                          *
  * Fecha de modificacion:          18/11/2024                                          *
  * Materia:                        Estructura de datos                                 *

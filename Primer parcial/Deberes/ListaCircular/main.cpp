@@ -1,3 +1,12 @@
+/***************************************************************************************
+ *            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE                                  *
+ * Proposito:                      Programa sobre lista circular cifrado               *
+ * Autor:                          Carlos Perez                                        *
+ * Fecha de creacion:              04/12/2024                                          *
+ * Fecha de modificacion:          04/12/2024                                          *
+ * Materia:                        Estructura de datos                                 *
+ * NRC :                           1978                                                *
+ **************************************************************************************/
 #include "Lista_Circular.cpp"
 #include "Nodo.cpp"
 #include "utils.cpp"
@@ -16,7 +25,7 @@ int main() {
     Validaciones<std::string> ingresar_string;
     Validaciones<long> ingresar_entero;
     Validaciones<int> ingresar_entero1;
-
+    Validaciones<char> ingresar_char;
     string opciones[] = { "\033[36mInsertar por cabeza\033[0m", "Insertar por cola" ,"Buscar por cedula", "Eliminar Nodo", "Eliminar datos Nodo", "Cifrar", "Mostrar", "Salir" };
     const int num_opciones = 8;
     int seleccion = 0;
@@ -129,9 +138,8 @@ int main() {
                 lista_string1->EliminarDatosNodo(cedulaStr);
                 break;
 
-            case 5: // Mostrar
-                cout << "Ingrese el caracter a eliminar: ";
-                cin >> a;
+            case 5: //cifrar
+                a=ingresar_char.ingresar("Ingrese el caracter a cifrar", "char");
                 lista_string1->Cifrar(a);
                 cout << "Cifrado correctamente";
                 cout << endl;
