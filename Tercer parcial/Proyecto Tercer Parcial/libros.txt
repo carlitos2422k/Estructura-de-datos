@@ -1,0 +1,60 @@
+El Quijote;Miguel de Cervantes;L001;Sección A, Estante 1;Clásico;0
+Cien años de soledad;Gabriel García Márquez;L002;Sección B, Estante 3;Realismo Mágico;3
+El principito;Antoine de Saint-Exupéry;L003;Sección C, Estante 2;Infantil;5
+1984;George Orwell;L004;Sección A, Estante 4;Distopía;25
+Rayuela;Julio Cortázar;L005;Sección B, Estante 1;Experimental;0
+La metamorfosis;Franz Kafka;L006;Sección C, Estante 3;Ficción;3
+El amor en los tiempos del cólera;Gabriel García Márquez;L007;Sección B, Estante 3;Realismo Mágico;20
+Pedro Páramo;Juan Rulfo;L008;Sección B, Estante 4;Realismo Mágico;4
+Crimen y castigo;Fiódor Dostoyevski;L009;Sección A, Estante 2;Clásico;32
+La sombra del viento;Carlos Ruiz Zafón;L010;Sección D, Estante 1;Misterio;5
+Harry Potter y la piedra filosofal;J.K. Rowling;L011;Sección E, Estante 1;Fantasía;1
+El código Da Vinci;Dan Brown;L012;Sección D, Estante 2;Thriller;45
+Los juegos del hambre;Suzanne Collins;L013;Sección E, Estante 2;Distopía;25
+Orgullo y prejuicio;Jane Austen;L014;Sección A, Estante 3;Clásico;20
+El señor de los anillos;J.R.R. Tolkien;L015;Sección E, Estante 1;Fantasía;2
+Matar a un ruiseñor;Harper Lee;L016;Sección A, Estante 5;Clásico;41
+El gran Gatsby;F. Scott Fitzgerald;L017;Sección A, Estante 5;Clásico;15
+Sapiens: De animales a dioses;Yuval Noah Harari;L018;Sección F, Estante 1;Historia;1
+El hobbit;J.R.R. Tolkien;L019;Sección E, Estante 1;Fantasía;25
+Un mundo feliz;Aldous Huxley;L020;Sección A, Estante 4;Distopía;41
+Crónica de una muerte anunciada;Gabriel García Márquez;L021;Sección B, Estante 3;Realismo Mágico;3
+El retrato de Dorian Gray;Oscar Wilde;L022;Sección A, Estante 2;Clásico;12
+El perfume;Patrick Süskind;L023;Sección D, Estante 3;Ficción;23
+Fahrenheit 451;Ray Bradbury;L024;Sección A, Estante 4;Distopía;16
+El nombre de la rosa;Umberto Eco;L025;Sección D, Estante 1;Misterio;15
+La naranja mecánica;Anthony Burgess;L026;Sección A, Estante 4;Distopía;12
+Las venas abiertas de América Latina;Eduardo Galeano;L027;Sección F, Estante 2;Historia;13
+Harry Potter y la cámara secreta;J.K. Rowling;L028;Sección E, Estante 1;Fantasía;25
+El proceso;Franz Kafka;L029;Sección C, Estante 3;Ficción;2
+Cien años de soledad: Edición conmemorativa;Gabriel García Márquez;L030;Sección B, Estante 3;Realismo Mágico;15
+Harry Potter y el prisionero de Azkaban;J.K. Rowling;L031;Sección E, Estante 1;Fantasía;12
+El lobo estepario;Hermann Hesse;L032;Sección B, Estante 2;Ficción;25
+Los pilares de la Tierra;Ken Follett;L033;Sección D, Estante 3;Histórica;36
+Drácula;Bram Stoker;L034;Sección C, Estante 1;Terror;23
+Siddhartha;Hermann Hesse;L035;Sección B, Estante 2;Ficción;22
+Los miserables;Victor Hugo;L036;Sección A, Estante 3;Clásico;23
+Don Juan Tenorio;José Zorrilla;L037;Sección A, Estante 1;Clásico;14
+La Odisea;Homero;L038;Sección A, Estante 1;Clásico;23
+Frankenstein;Mary Shelley;L039;Sección C, Estante 1;Terror;10
+La Iliada;Homero;L040;Sección A, Estante 1;Clásico;23
+En busca del tiempo perdido;Marcel Proust;L041;Sección A, Estante 2;Clásico;25
+La Divina Comedia;Dante Alighieri;L042;Sección A, Estante 1;Clásico;25
+Los hermanos Karamazov;Fiódor Dostoyevski;L043;Sección A, Estante 2;Clásico;23
+Anna Karenina;León Tolstói;L044;Sección A, Estante 3;Clásico;25
+Madame Bovary;Gustave Flaubert;L045;Sección A, Estante 3;Clásico;26
+Hamlet;William Shakespeare;L046;Sección A, Estante 1;Clásico;4
+Romeo y Julieta;William Shakespeare;L047;Sección A, Estante 1;Clásico;23
+La vuelta al mundo en 80 días;Julio Verne;L048;Sección C, Estante 2;Aventura;5
+Veinte mil leguas de viaje submarino;Julio Verne;L049;Sección C, Estante 2;Aventura;1
+Viaje al centro de la Tierra;Julio Verne;L050;Sección C, Estante 2;Aventura;2
+Historia de dos ciudades;Charles Dickens;L051;Sección A, Estante 5;Clásico;25
+Oliver Twist;Charles Dickens;L052;Sección A, Estante 5;Clásico;25
+Moby Dick;Herman Melville;L053;Sección A, Estante 4;Clásico;36
+La isla del tesoro;Robert Louis Stevenson;L054;Sección C, Estante 2;Aventura;4
+El último mohicano;James Fenimore Cooper;L055;Sección C, Estante 2;Aventura;25
+Las aventuras de Tom Sawyer;Mark Twain;L056;Sección C, Estante 2;Aventura;3
+El retrato de una dama;Henry James;L057;Sección A, Estante 5;Clásico;23
+El guardián entre el centeno;J.D. Salinger;L058;Sección B, Estante 1;Ficción;23
+Lolita;Vladimir Nabokov;L059;Sección B, Estante 5;Ficción;15
+La montaña mágica;Thomas Mann;L060;Sección B, Estante 2;Ficción;16

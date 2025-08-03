@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Ayuda - Sistema de Gestión de Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #3498db;
+            margin-top: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+        .note {
+            background-color: #e7f5fe;
+            border-left: 4px solid #3498db;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manual de Ayuda - Sistema de Gestión de Biblioteca</h1>
+    
+    <div class="section">
+        <h2>1. Introducción</h2>
+        <p>Bienvenido al Sistema de Gestión de Biblioteca. Esta aplicación permite administrar libros, usuarios y préstamos de una biblioteca de manera eficiente. Utiliza estructuras de datos avanzadas como árboles AVL para libros, tablas hash para usuarios y listas doblemente enlazadas circulares para el historial de préstamos.</p>
+        
+        <p>El sistema ofrece dos tipos de usuarios:</p>
+        <ul>
+            <li><strong>Usuarios regulares</strong>: Pueden solicitar préstamos, devolver libros y ver recomendaciones personalizadas.</li>
+            <li><strong>Administradores</strong>: Tienen acceso completo a la gestión de libros, usuarios y sistema de préstamos.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>2. Menú Principal</h2>
+        <p>Al iniciar la aplicación, se muestra el menú principal con las siguientes opciones:</p>
+        
+        <table>
+            <tr>
+                <th>Opción</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>Iniciar sesión</td>
+                <td>Permite a usuarios existentes acceder al sistema con su ID y contraseña.</td>
+            </tr>
+            <tr>
+                <td>Registrar nuevo usuario</td>
+                <td>Permite crear una cuenta de usuario regular nueva.</td>
+            </tr>
+            <tr>
+                <td>Registrar nuevo administrador</td>
+                <td>Permite crear una cuenta de administrador nueva (solo disponible en modo demo).</td>
+            </tr>
+            <tr>
+                <td>Mostrar todos los usuarios registrados</td>
+                <td>Muestra la lista de todos los usuarios registrados en el sistema.</td>
+            </tr>
+            <tr>
+                <td>Ayuda</td>
+                <td>Muestra este manual de ayuda.</td>
+            </tr>
+            <tr>
+                <td>Salir</td>
+                <td>Cierra la aplicación.</td>
+            </tr>
+        </table>
+        
+        <p class="note">Nota: Puedes navegar por los menús utilizando las teclas de flecha arriba/abajo y presionar Enter para seleccionar una opción. La tecla Esc te permite volver al menú anterior.</p>
+    </div>
+    
+    <div class="section">
+        <h2>3. Registro e Inicio de Sesión</h2>
+        
+        <h3>3.1 Registro de Usuario</h3>
+        <p>Al registrar un nuevo usuario, deberás proporcionar la siguiente información:</p>
+        <ul>
+            <li><strong>ID de Usuario</strong>: Un identificador único para tu cuenta.</li>
+            <li><strong>Nombre</strong>: Tu nombre completo.</li>
+            <li><strong>Contacto</strong>: Una dirección de correo electrónico válida.</li>
+            <li><strong>Contraseña</strong>: Una contraseña de al menos 6 caracteres.</li>
+        </ul>
+        
+        <h3>3.2 Inicio de Sesión</h3>
+        <p>Para iniciar sesión, necesitarás:</p>
+        <ul>
+            <li>Tu ID de usuario</li>
+            <li>Tu contraseña</li>
+        </ul>
+        
+        <p>Usuarios de prueba por defecto:</p>
+        <ul>
+            <li>Usuario regular: ID: U001, Contraseña: user123</li>
+            <li>Administrador: ID: A001, Contraseña: admin123</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>4. Menú de Usuario</h2>
+        <p>Una vez iniciada la sesión como usuario regular, tendrás acceso a las siguientes opciones:</p>
+        
+        <table>
+            <tr>
+                <th>Opción</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>Ver mis préstamos activos</td>
+                <td>Muestra los libros que tienes prestados actualmente.</td>
+            </tr>
+            <tr>
+                <td>Ver mi historial de préstamos</td>
+                <td>Muestra todos los préstamos que has realizado, tanto activos como devueltos.</td>
+            </tr>
+            <tr>
+                <td>Solicitar préstamo</td>
+                <td>Te permite solicitar un libro que esté disponible en la biblioteca.</td>
+            </tr>
+            <tr>
+                <td>Devolver libro</td>
+                <td>Te permite devolver un libro que tengas prestado.</td>
+            </tr>
+            <tr>
+                <td>Ver multas pendientes</td>
+                <td>Muestra las multas por devoluciones tardías que tengas pendientes.</td>
+            </tr>
+            <tr>
+                <td>Obtener recomendaciones personalizadas</td>
+                <td>Muestra libros recomendados según tu historial de lectura y preferencias.</td>
+            </tr>
+            <tr>
+                <td>Cambiar datos personales</td>
+                <td>Te permite modificar tu nombre, contacto o contraseña.</td>
+            </tr>
+            <tr>
+                <td>Cerrar sesión</td>
+                <td>Cierra tu sesión actual y vuelve al menú principal.</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2>5. Menú de Administrador</h2>
+        <p>Como administrador, tienes acceso a todas las funcionalidades del sistema:</p>
+        
+        <table>
+            <tr>
+                <th>Opción</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>Gestionar usuarios</td>
+                <td>Permite ver, buscar y eliminar usuarios del sistema.</td>
+            </tr>
+            <tr>
+                <td>Gestionar libros</td>
+                <td>Permite ver, buscar, añadir, modificar y eliminar libros del catálogo.</td>
+            </tr>
+            <tr>
+                <td>Ver todos los préstamos</td>
+                <td>Muestra todos los préstamos registrados en el sistema.</td>
+            </tr>
+            <tr>
+                <td>Ver préstamos vencidos</td>
+                <td>Muestra los préstamos que han superado su fecha de devolución.</td>
+            </tr>
+            <tr>
+                <td>Ver historial de préstamos de un usuario</td>
+                <td>Permite consultar el historial completo de un usuario específico.</td>
+            </tr>
+            <tr>
+                <td>Generar reporte general</td>
+                <td>Genera estadísticas sobre préstamos, devoluciones y multas.</td>
+            </tr>
+            <tr>
+                <td>Configurar sistema de recomendaciones</td>
+                <td>Permite ajustar los parámetros del algoritmo de recomendaciones.</td>
+            </tr>
+            <tr>
+                <td>Cerrar sesión</td>
+                <td>Cierra la sesión de administrador y vuelve al menú principal.</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2>6. Gestión de Libros</h2>
+        
+        <h3>6.1 Añadir un Libro</h3>
+        <p>Para añadir un nuevo libro al sistema, deberás proporcionar:</p>
+        <ul>
+            <li><strong>Código</strong>: Un identificador único en formato LXXX (donde X son números), por ejemplo: L001.</li>
+            <li><strong>Título</strong>: El título del libro.</li>
+            <li><strong>Autor</strong>: El nombre del autor.</li>
+            <li><strong>Ubicación</strong>: La ubicación física del libro en la biblioteca.</li>
+            <li><strong>Género</strong>: El género literario al que pertenece.</li>
+            <li><strong>Copias disponibles</strong>: El número de ejemplares disponibles.</li>
+        </ul>
+        
+        <h3>6.2 Modificar un Libro</h3>
+        <p>Permite actualizar cualquier información de un libro existente. El código no puede ser modificado, ya que es el identificador único.</p>
+        
+        <h3>6.3 Eliminar un Libro</h3>
+        <p>Permite eliminar un libro del catálogo. No se pueden eliminar libros que tengan préstamos activos.</p>
+    </div>
+    
+    <div class="section">
+        <h2>7. Sistema de Préstamos</h2>
+        
+        <h3>7.1 Solicitar un Préstamo</h3>
+        <p>Para solicitar un libro en préstamo:</p>
+        <ol>
+            <li>Selecciona "Solicitar préstamo" en el menú de usuario.</li>
+            <li>Verás una lista de libros disponibles.</li>
+            <li>Ingresa el código del libro que deseas.</li>
+            <li>Confirma la solicitud.</li>
+        </ol>
+        <p>El sistema registrará tu préstamo y actualizará las copias disponibles del libro.</p>
+        
+        <h3>7.2 Devolver un Libro</h3>
+        <p>Para devolver un libro:</p>
+        <ol>
+            <li>Selecciona "Devolver libro" en el menú de usuario.</li>
+            <li>Verás una lista de tus préstamos activos.</li>
+            <li>Ingresa el ID del préstamo que deseas devolver.</li>
+            <li>Confirma la devolución.</li>
+        </ol>
+        
+        <h3>7.3 Multas por Retraso</h3>
+        <p>Si devuelves un libro después de la fecha límite, se generará una multa. El sistema calcula las multas a razón de $5 por cada día de retraso.</p>
+    </div>
+    
+    <div class="section">
+        <h2>8. Sistema de Recomendaciones</h2>
+        <p>El sistema cuenta con un algoritmo de recomendación que sugiere libros basándose en:</p>
+        <ul>
+            <li><strong>Historial personal</strong>: Los géneros que has leído anteriormente.</li>
+            <li><strong>Popularidad</strong>: Libros frecuentemente solicitados por otros usuarios.</li>
+            <li><strong>Relaciones entre géneros</strong>: Géneros relacionados con tus preferencias.</li>
+            <li><strong>Novedades</strong>: Libros que no has leído antes.</li>
+        </ul>
+        
+        <h3>8.1 Configuración del Sistema de Recomendaciones</h3>
+        <p>Los administradores pueden ajustar los parámetros de recomendación:</p>
+        <ul>
+            <li><strong>Configurar pesos manualmente</strong>: Ajustar la importancia de cada factor.</li>
+            <li><strong>Establecer configuración predeterminada</strong>: Restaurar los valores por defecto.</li>
+            <li><strong>Ver configuración actual</strong>: Mostrar los valores actuales.</li>
+            <li><strong>Regenerar índice de recomendaciones</strong>: Actualizar los datos utilizados para las recomendaciones.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>9. Respaldo y Recuperación</h2>
+        <p>El sistema realiza backups diarios automáticos de la información de préstamos. Al iniciar, puedes elegir cargar un backup específico si es necesario.</p>
+        
+        <h3>9.1 Cargar un Backup</h3>
+        <p>Al iniciar el sistema, tienes la opción de cargar un backup anterior. Esto puede ser útil si necesitas recuperar información de días anteriores.</p>
+    </div>
+    
+    <div class="section">
+        <h2>10. Estructuras de Datos Utilizadas</h2>
+        <p>El sistema utiliza estructuras de datos eficientes para garantizar un buen rendimiento:</p>
+        <ul>
+            <li><strong>Árbol AVL</strong>: Para almacenar y buscar libros de manera eficiente.</li>
+            <li><strong>Tabla Hash</strong>: Para gestionar usuarios con acceso rápido.</li>
+            <li><strong>Lista Doblemente Enlazada Circular</strong>: Para manejar el historial de préstamos.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>11. Solución de Problemas</h2>
+        
+        <h3>11.1 No puedo iniciar sesión</h3>
+        <p>Verifica que estés usando el ID y contraseña correctos. Si olvidaste tu contraseña, contacta con un administrador.</p>
+        
+        <h3>11.2 No puedo solicitar un préstamo</h3>
+        <p>Asegúrate de que:</p>
+        <ul>
+            <li>El libro que deseas tenga copias disponibles.</li>
+            <li>El código del libro sea correcto.</li>
+            <li>No tengas multas pendientes que bloqueen nuevos préstamos.</li>
+        </ul>
+        
+        <h3>11.3 No veo mis recomendaciones</h3>
+        <p>Para recibir recomendaciones personalizadas, debes tener al menos un préstamo registrado en tu historial. Si eres un usuario nuevo, primero solicita algunos libros.</p>
+    </div>
+    
+    <footer style="text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9em;">
+        <p>Sistema de Gestión de Biblioteca © 2023<br>Versión 1.0</p>
+    </footer>
+</body>
+</html>

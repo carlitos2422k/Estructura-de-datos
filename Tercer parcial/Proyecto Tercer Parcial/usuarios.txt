@@ -1,0 +1,14 @@
+U;U006;Sofía Gutiérrez;sofia@email.com;sofia123
+U;U002;María López;maria@email.com;maria456
+A;A001;Admin Principal;admin@biblioteca.com;admin123
+U;U007;Miguel Torres;miguel@email.com;miguel456
+U;U003;Carlos Rodríguez;carlos@email.com;carlos789
+A;A002;Laura Administrador;laura@biblioteca.com;laura789
+U;U010;Elena Hernández;elena@email.com;elena456
+U;U008;Lucía Ramírez;lucia@email.com;lucia789
+U;U004;Ana Martínez;ana@email.com;ana123
+U;PEPE;Jose Fernando;jose@gmail.com;pepe123456
+U;Fsol;as;asjdhjash@dominio.com;Fernando123
+U;U009;Daniel González;daniel@email.com;daniel123
+U;U005;Pedro Sánchez;pedro@email.com;pedro456
+U;U001;Juan Pérez;juan@email.com;user123

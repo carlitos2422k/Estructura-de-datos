@@ -1,0 +1,64 @@
+Paso 1:
+Colocando reina en posición (1,1)
+Q . . . 
+. . . . 
+. . . . 
+. . . . 
+
+Paso 2:
+Colocando reina en posición (3,2)
+Q . . . 
+. . . . 
+. Q . . 
+. . . . 
+
+Paso 3: Retrocediendo - removiendo reina de (3,2)
+
+Paso 4:
+Colocando reina en posición (4,2)
+Q . . . 
+. . . . 
+. . . . 
+. Q . . 
+
+Paso 5:
+Colocando reina en posición (2,3)
+Q . . . 
+. . Q . 
+. . . . 
+. Q . . 
+
+Paso 6: Retrocediendo - removiendo reina de (2,3)
+
+Paso 7: Retrocediendo - removiendo reina de (4,2)
+
+Paso 8: Retrocediendo - removiendo reina de (1,1)
+
+Paso 9:
+Colocando reina en posición (2,1)
+. . . . 
+Q . . . 
+. . . . 
+. . . . 
+
+Paso 10:
+Colocando reina en posición (4,2)
+. . . . 
+Q . . . 
+. . . . 
+. Q . . 
+
+Paso 11:
+Colocando reina en posición (1,3)
+. . Q . 
+Q . . . 
+. . . . 
+. Q . . 
+
+Paso 12:
+Colocando reina en posición (3,4)
+. . Q . 
+Q . . . 
+. . . Q 
+. Q . . 
+
